@@ -1,0 +1,40 @@
+head(AGG)
+head(AMJ)
+
+summary(AGG)
+plot(AGG)
+
+plot(AGG$Close)
+plot(AGG$Volume)
+
+plot(AGG$Close,type="l")
+plot(AGG$Close,type="b")
+#both line and point 
+
+plot(AMJ$Close,AGG$Close)
+#x,y
+cor(AMJ$Close,AGG$Close)  
+diff(AGG$Close)
+#to get return
+
+plot(AGG$Close/AMJ$Close)
+#to get ratio, the ratio is always increasing 
+
+log_close=log(AGG$Close)
+plot(log_close)
+#log gives you stability in graph
+
+
+plot(AGG$Close,type="l",col="blue")
+par(new=T)
+plot(AMJ$Close,type="l",col="red")
+#seprates the two graphs
+
+legend("topright",c("AGG Closing","AMJ Closing"))
+
+max(AGG$Open)
+#max price at opening
+
+min(AGG$Open)
+
+
